@@ -18,11 +18,11 @@ public class AnimesData {
         DynamoDB dynamoDB = new DynamoDB(client);
 
 
-        Table table = dynamoDB.getTable("Animes_Table");
+        Table table = dynamoDB.getTable("Animes_Api_Table");
         Item anime = new Item()
-                .withPrimaryKey("id",1)
+                .withPrimaryKey("id","1")
                 .withString("name", "One Piece")
-                .withString("tipo","Aventura/Luta")
+                .withString("tipo","Aventura")
                 .withNumber("manga", 1000);
 
         PutItemOutcome outcome = table.putItem(anime);

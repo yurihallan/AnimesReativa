@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Setter
 @Data
 @NoArgsConstructor
-@DynamoDBTable(tableName = "Animes_Table")
+@DynamoDBTable(tableName = "Animes_Api_Table")
 public class Animes {
     @Id
     @DynamoDBHashKey(attributeName = "id")
